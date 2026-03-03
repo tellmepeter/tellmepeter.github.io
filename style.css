@@ -80,3 +80,37 @@ body {
   }
 
 }
+.footer {
+  margin-top: 80px;
+  padding: 20px;
+  background: #ece5dc;
+  border-top: 2px dashed #b8a898;
+  font-size: 14px;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.time-date {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-message {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
