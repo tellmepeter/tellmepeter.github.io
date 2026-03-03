@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  background: #f4efe9;
+  font-family: 'Courier New', monospace;
+}
+
+.container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.title {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.collage {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+.main-photo img {
+  width: 300px;
+  border: 10px solid white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.polaroid {
+  position: absolute;
+  width: 150px;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-decoration: none;
+  color: black;
+  transition: 0.3s ease;
+}
+
+.polaroid img {
+  width: 100%;
+}
+
+.polaroid span {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.polaroid:hover {
+  transform: scale(1.1) rotate(3deg);
+}
+
+/* posições tipo colagem */
+.blog { top: 20px; left: -50px; transform: rotate(-10deg); }
+.galeria { top: 200px; left: -70px; transform: rotate(8deg); }
+.projetos { top: 50px; right: -60px; transform: rotate(6deg); }
+.sobre { top: 220px; right: -40px; transform: rotate(-7deg); }
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+  .collage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .polaroid {
+    position: relative;
+    margin: 20px 0;
+    transform: rotate(0deg);
+  }
+
+  .blog, .galeria, .projetos, .sobre {
+    top: auto;
+    left: auto;
+    right: auto;
+  }
+
+}
